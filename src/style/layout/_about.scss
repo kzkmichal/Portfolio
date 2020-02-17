@@ -1,0 +1,173 @@
+    .about {
+        width: 100%;
+        background-color: var(--color-grey-light-3);
+        @include sectionPadding(8rem, 4rem);
+        @include respond(tab-port) {
+            @include sectionPadding(6rem, 4rem);
+        }
+        &__inner {
+            @extend .wrapper;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__heading {
+            position: relative;
+            padding: 1rem 2rem;
+            margin-bottom: 5rem;
+            @include cornerBorder(var(--color-primary), 0.3rem, 0, 0%, 0, 0, 25%, 50%);
+            @include respond(tab-port) {
+                margin-bottom: 7rem;
+            }
+        }
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: $medium-font-size;
+            @include respond(tab-port) {
+                // justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &__description {
+            font-family: $font-primary, sans-serif;
+            font-weight: 500;
+            flex: 0 0 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            @include respond(tab-port) {
+                order: 2;
+                margin-top: 7rem;
+                width: 80%;
+                align-items: flex-start;
+            }
+            @include respond(mobile-small) {
+                width: 100%;
+            }
+        }
+        &__paragraph {
+            line-height: 130%;
+            margin: 0 0 2rem;
+            justify-content: left;
+            @include respond(tab-port) {
+                font-size: 2.3rem;
+            }
+            @include respond(mobile-small) {
+                font-size: 2.8rem;
+                margin: 0 0 2.4rem;
+            }
+        }
+        &__skills {
+            list-style-type: none;
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            @include respond(mobile-small) {
+                font-size: 2.3rem;
+                margin: 0 0 2.4rem;
+            }
+        }
+        &__technology {
+            box-sizing: border-box;
+            flex: 0 0 50%;
+            position: relative;
+            padding-left: 2rem;
+            &:before {
+                content: "▹";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--color-primary);
+                fill: var(--color-primary);
+                font-size: 2.5rem;
+                // line-height: 100%;
+            }
+        }
+        &__links {
+            width: 100%;
+            display: flex;
+            margin-top: 5rem;
+            @include respond(mobile) {
+                align-items: center;
+                flex-direction: column;
+                margin-top: 6rem;
+            }
+        }
+        &__mail {
+            @extend .link;
+            @include respond(tab-land-mobile) {
+                margin-right: auto;
+            }
+            @include respond(tab-land) {
+                margin-top: 2rem;
+            }
+            @include respond(mobile-small) {}
+        }
+        &__curriculum {
+            @extend .link;
+            @include respond(tab-land-mobile) {
+                margin-right: auto;
+            }
+            @include respond(tab-land) {
+                margin-top: 2rem;
+            }
+            @include respond(tab-port) {
+                margin-right: 7rem
+            }
+            @include respond(mobile) {
+                margin-right: 0rem
+            }
+        }
+        &__photo {
+            display: flex;
+            justify-content: center;
+            flex: 0 0 40%;
+            width: 100%;
+            height: 100%;
+        }
+        &__image-container {
+            width: 30rem;
+            height: 30rem;
+            position: relative;
+            box-sizing: border-box;
+            &::after {
+                content: "";
+                z-index: -1;
+                position: absolute;
+                bottom: -2rem;
+                right: -2rem;
+                width: 100%;
+                height: 100%;
+                border: 0.3rem solid var(--color-primary);
+                border-radius: .5rem;
+            }
+            @include respond(mobile) {
+                width: 26rem;
+                height: 26rem;
+            }
+        }
+        &__image {
+            width: 100%;
+            height: 100%;
+            border-radius: .5rem;
+            @include respond(mobile) {
+                width: 100%;
+            }
+        }
+    }
+
+    .slideIn {
+        transform: translateY(5%);
+        transition: 0.3s ease-out;
+        opacity: 0;
+    }
+
+    .active {
+        animation: fadeIn 0.4s linear both;
+    }

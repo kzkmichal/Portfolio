@@ -1,0 +1,221 @@
+(function($){
+    
+    $(document).ready(function() {
+        // qtip_movie_item();
+
+
+        function e() {
+            $(this).find(".sub-container").css("display", "block")
+        }
+        function s() {
+            $(this).find(".sub-container").css("display", "none")
+        }
+        $("#search a.box-title").click(function() {
+            $("#search .box").toggleClass("active")
+        }),
+        $(".mobile-menu").click(function() {
+            $("#menu,.mobile-menu").toggleClass("active"),
+            $("#search, .mobile-search").removeClass("active")
+        }),
+        $(".mobile-search").click(function() {
+            $("#search,.mobile-search").toggleClass("active"),
+            $("#menu, .mobile-menu").removeClass("active")
+        }),
+        $(".filter-toggle").click(function() {
+            $("#filter").toggleClass("active"),
+            $(".filter-toggle").toggleClass("active")
+        }),
+        $("#toggle, .cac-close").click(function() {
+            $("#comment").toggleClass("active")
+        }),
+        $(".top-menu> li").bind("mouseover", e),
+        $(".top-menu> li").bind("mouseout", s);
+        $(function() {
+            function e() {
+                var e = $(this)
+                  , s = e.find(".modal-dialog");
+                e.css("display", "block"),
+                s.css("margin-top", Math.max(0, ($(window).height() - s.height()) / 2))
+            }
+            $(".modal").on("show.bs.modal", e),
+            $(window).on("resize", function() {
+                $(".modal:visible").each(e)
+            })
+        });
+
+        // console.log(MyAjax.ajaxurl);
+
+        $("#report-form").submit(function(e) {
+
+            e.preventDefault();
+
+            var movieID = $("#report-eID").val();
+            var $form = $(this);
+            
+            if (!$.cookie('report-' + movieID)) {
+                $("#report-submit").prop("disabled", true);
+                $("#report-loading").show();
+                // var postData = $(this).serializeArray();
+
+                $.ajax({
+                    type:"POST",
+                    url:MyAjax.ajaxurl,
+                    dataType: 'json',
+                    cache: false,
+                    data: $form.serialize(),
+                    success: function(data) {
+                        if (data.success == 0) {
+                            $("#report-error-message").show();
+                            $("#report-error-message").text(data.message);
+                        }
+                        if (data.success == 1) {
+                            $('#pop-report').modal('hide');
+                            $("#report-alert").show();
+                            setTimeout(function() {
+                                $("#report-alert").hide();
+                            }, 5000);
+                            $(".bp-btn-report").remove();
+                            $.cookie('report-' + movieID, true, {
+                                path: '/',
+                                expires: 1
+                            });
+                            document.getElementById("report-form").reset();
+                        }
+                        $("#report-submit").removeAttr("disabled");
+                        $("#report-loading").hide();
+                    }
+                });
+            }
+            e.preventDefault();
+        });
+    });
+
+})(jQuery);
+
+
+
+
+// function favorite(movieID, type, name) {
+//     is_login ? ($.ajax({
+//         url: base_url + "ajax/user_favorite",
+//         method: "POST",
+//         data: {
+//             movieID: movieID,
+//         },
+//         dataType: "json",
+//         success: function(data) {
+//             if (data.is_login == false) {
+//                 $("#pop-login").modal("show");
+//             } else {
+//                 if (data.status == 1) {
+//                     $(".btn-favorite-" + movieID).addClass("active");
+//                     var message = "<strong>" + name + "</strong> has been added to your favorite list.";
+//                 } else {
+//                     $(".btn-favorite-" + movieID).removeClass("active")
+//                     var message = "<strong>" + name + "</strong> has been removed from your favorite list.";
+//                 }
+//                 if (type == 1) {
+//                     $("#message-content").html(message),
+//                     $("#pop-alert").modal("show")
+//                 } else if (type == 2) {
+//                     $("#favorite-alert").show(),
+//                     $("#favorite-message").html(message),
+//                     setTimeout(function() {
+//                         $("#favorite-alert").hide()
+//                     }, 5000)
+//                 }
+//             }
+//         }
+//     })) : $("#pop-login").modal("show")
+// }
+// function updateMovieView(movieID) {
+//     $.cookie("view-" + movieID) || $.ajax({
+//         url: base_url + "ajax/movie_update_view",
+//         type: "POST",
+//         dataType: "json",
+//         data: {
+//             movieID: movieID
+//         },
+//         success: function(data) {
+//             if (data.status == 1) {
+//                 $.cookie("view-" + movieID, "1", {
+//                     expires: 1,
+//                     path: '/'
+//                 });
+//             }
+//         }
+//     })
+// }
+// function validateEmail(e) {
+//     var s = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+//     return e.length > 0 && s.test(e)
+// }
+// function qtip_movie_item() {
+//     if (!jQuery.browser.mobile) {
+//         $('a.cluetip').cluetip({
+//             dropShadow: true,
+//             sticky: true,
+//             positionBy: 'mouse',
+//             mouseOutClose: true,
+//             showTitle: false,
+//             closeText: '',
+//             width: 360,
+//         });
+//     }
+//     $("img.lazy").lazyload({
+//         effect: "fadeIn"
+//     });
+// }
+// function validate_report() {
+//     if (($("#report-form input[name*='issue']:checked").length) <= 0) {
+//         alert("Please select any issue.");
+//         return false;
+//     }
+//     return true;
+// }
+// function autonext() {
+//     var next = $.cookie("player-next");
+//     if (next == 0) {
+//         $.cookie("player-next", "1", {
+//             expires: 365,
+//             path: '/'
+//         });
+//         $('#autonext').html('ON');
+//     } else {
+//         $.cookie("player-next", "0", {
+//             expires: 365,
+//             path: '/'
+//         });
+//         $('#autonext').html('OFF');
+//     }
+// }
+// function function_one() {
+//     var cookieData = $jwcookie.getItem('resume_' + encodeURIComponent(window.location.href));
+//     if (cookieData) {
+//         var resumeAt = cookieData.split(':')[0]
+//           , videoDur = cookieData.split(':')[1];
+//         if (parseInt(resumeAt) < parseInt(videoDur)) {
+//             player.seek(resumeAt);
+//         } else if (cookieData && !(parseInt(resumeAt) < parseInt(videoDur))) {}
+//     }
+// }
+// function loadSchedule() {
+//     var content = document.getElementById('schedule_list_allpage');
+//     var buttonLoadSchedule = document.getElementById('buttonLoadSchedule');
+//     if (content.style.display == "none") {
+//         (!$("#schedule").text().length) ? $.ajax({
+//             url: base_url + "ajax/schedule",
+//             type: "GET",
+//             dataType: "json",
+//             success: function(data) {
+//                 $("#schedule").html(data.content);
+//                 $('.ps-active-y').perfectScrollbar();
+//             }
+//         }) : "";
+//         content.style.display = "block";
+//         buttonLoadSchedule.innerHTML = '<a class="toggle_schedule_close" href="javascript:loadSchedule()"><span class="btn-close-schedule">Close</span></a>';
+//     } else {
+//         content.style.display = "none";
+//         buttonLoadSchedule.innerHTML = '<a class="toggle_schedule" href="javascript:loadSchedule()"><i class="fa fa-bolt schedule_thunder"></i> <span>Schedule</span></a>';
+//     }
+// }

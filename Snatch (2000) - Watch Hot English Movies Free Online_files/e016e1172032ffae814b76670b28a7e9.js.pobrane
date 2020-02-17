@@ -1,0 +1,2 @@
+Bootstrapper.bindImmediate(function(){var Bootstrapper=window["Bootstrapper"];var ensightenOptions=Bootstrapper.ensightenOptions;Bootstrapper["UA_ga_events"]=Bootstrapper["UA_ga_events"]||[];Bootstrapper.ensEvent.add("home_event_categoryclick",function(){var ensEventContext=this;if(ensEventContext==window)ensEventContext=undefined;var sendObj={"hitType":"event","eventCategory":"Sports Categories","eventAction":function(){return this.home_event_category}.call(this),"transport":""};Bootstrapper["UA_ga_events"].push(sendObj)})},
+2824406,593844);

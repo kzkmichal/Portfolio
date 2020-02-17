@@ -1,0 +1,17 @@
+.works {
+    width: 100%;
+    @include sectionPadding(8rem, 4rem);
+    font-family: $font-secondary, sans-serif;
+    background-color: var(--color-grey-light-3);
+    &__inner {
+        @extend .wrapper;
+        display: flex;
+        flex-direction: column;
+    }
+    &__heading {
+        position: relative;
+        padding: 1rem 2rem;
+        margin: 0 auto 3rem;
+        @include cornerBorder(var(--color-primary), 0.3rem, 0, 0%, 0, 0, 25%, 50%)
+    }
+}

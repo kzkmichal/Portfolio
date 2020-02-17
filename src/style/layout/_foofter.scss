@@ -1,0 +1,75 @@
+    .footer {
+        width: 100%;
+        height: 20vh;
+        @include sectionPadding(5rem, 3rem);
+        background-color: var(--color-grey-dark-1);
+        &__inner {
+            @extend .wrapper;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            ;
+        }
+        &__social-media {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0em;
+            list-style-type: none;
+            margin: 0;
+        }
+        &__item {
+            width: 6rem;
+            height: 6rem;
+            z-index: 5;
+            box-sizing: border-box;
+            position: relative;
+            border: 2px solid #EEEEEE;
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
+        &__link {
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: 1s all ease-out;
+            @include respond(mobile) {
+                width: 7rem;
+                height: 7rem;
+            }
+            &:after {
+                z-index: 1;
+                content: "";
+                opacity: 0;
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                width: 100%;
+                height: 100%;
+                border: 2px solid #EEEEEE;
+                transform: scale(0.9);
+            }
+            @include respond(tab-land-mobile) {
+                &:hover:after {
+                    animation: sonarWave 0.8s ease-out;
+                }
+            }
+        }
+        &__icon {
+            width: 3em;
+            height: 3rem;
+            @include centered;
+            fill: #EEEEEE;
+            transition: .5s all step-end;
+            @include respond(mobile) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        &__legal {
+            color: #EEEEEE;
+            padding: 3rem 0 0;
+        }
+    }

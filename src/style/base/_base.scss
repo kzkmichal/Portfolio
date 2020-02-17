@@ -1,0 +1,129 @@
+:root {
+    --color-primary: #00c781;
+    //  --color-primary: #50D890;
+    // --color-primary: #4dd599;
+    --color-primary-light: #00D28E;
+    --color-primary-dark: #0AB86B;
+    --color-grey-light-1: #EEEEEE; //font color --dark-mode
+    --color-grey-light-2: #fcfcfc; ///background light--mode
+    --color-grey-light-3: #EDEDED; // box-color
+    --color-grey-dark-1: #232931; ///background darkmode--mode
+    --color-grey-dark-2: #4D4646;
+    --color-grey-dark-3: #393e46; //font color --light -mode & box-color --dark-mode
+    --color-nav: #393e46b4;
+    --color-white: #ffff;
+    --color-black: #000;
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
+    --line: 1px solid var(--color-grey-light-2);
+    --box-width: 90%;
+    --elements-displayed: 4;
+    --element-width: calc(var(--box-width) / var(--elements-displayed));
+    --animation-duration: calc(var(--elements) * 2s);
+}
+
+[data-theme="dark"] {
+    --color-primary: #6fffb0;
+    // --color-primary: #00D28E;
+    --color-grey-light-1: #393e46;
+    --color-grey-light-2: #232931; // background
+    --color-grey-light-3: #181818; //box color
+    --color-grey-dark-3: #EEEEEE; //font color
+    --color-nav: #eeeeeeb6; //font color
+    --color-black: #ffff;
+    --color-white: #000;
+}
+
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+    @include respond(tab-port-900px) {
+        font-size: 53%;
+    }
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+    @include respond(mobile) {
+        // font-size: 40%;
+    }
+    @include respond(mobile-small) {
+        font-size: 40%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-secondary, sans-serif;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.7;
+    color: var(--color-grey-dark-3);
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 8rem;
+    line-height: 110%;
+    @include respond(mobile) {
+        font-size: 7rem;
+    }
+    @include respond(mobile-small) {
+        font-size: 6rem;
+    }
+}
+
+h2 {
+    font-size: 3.4rem;
+    line-height: 120%;
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-grey-dark-3);
+    @include respond(mobile-small) {
+        font-size: 3.8rem;
+    }
+}
+
+h3 {
+    font-size: 3.2rem;
+    line-height: 130%;
+    margin: 0;
+    @include respond(mobile-small) {
+        font-size: 4.2rem;
+    }
+}
+
+.wrapper {
+    max-width: $grid-width;
+    margin: 0 auto;
+    height: inherit;
+    z-index: 2;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    box-sizing: border-box;
+    @include respond(tab-land) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    // @include respond(mobile) {
+    //     padding-left: 3.5rem;
+    //     padding-right: 3.5rem;
+    // }
+}

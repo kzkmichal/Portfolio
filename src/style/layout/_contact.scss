@@ -1,0 +1,90 @@
+.contact {
+    width: 100%;
+    height: 30rem;
+    @include sectionPadding(6rem, 6rem);
+    background-color: var(--color-grey-light-3);
+    @include respond(tab-port) {
+        height: auto;
+    }
+    &__inner {
+        @extend .wrapper;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__heading {
+        position: relative;
+        color: var(--color-grey-dark-3);
+        margin-bottom: 4rem;
+        padding: 1rem 2rem;
+        @include cornerBorder(var(--color-primary), 0.3rem, 0, 0%, 0, 0, 25%, 50%)
+    }
+    &__details {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        @include respond(tab-port) {
+            flex-direction: column;
+            padding-top: 5rem;
+        }
+    }
+    &__mail {
+        &,
+        &:link,
+        &:visited {
+            width: 40%;
+            text-decoration: none; // flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            @include respond(tab-port) {
+                width: 100%;
+                margin-bottom: 5rem
+            }
+        }
+    }
+    &__icon {
+        z-index: 1;
+        position: absolute;
+        @include centered;
+        height: 12rem;
+        opacity: 0.7;
+        fill: var(--color-primary-dark);
+        &--phone {
+            height: 9rem;
+        }
+    }
+    &__phone {
+        @extend .contact__mail;
+        @include respond(tab-port) {
+            margin-top: 5rem;
+        }
+    }
+    &__source {
+        text-transform: uppercase;
+        color: var(--color-grey-dark-3);
+        margin-bottom: 5rem;
+        font-weight: 500;
+        letter-spacing: .3rem;
+        @include respond(tab-port) {
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+    }
+    &__text {
+        z-index: 2;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        font-family: $font-primary, sans-serif;
+        font-size: 2.4rem;
+        color: var(--color-grey-dark-3);
+        transition: transform 0.4s ease-in;
+        @include respond(tab-port) {
+            font-size: 3rem;
+        }
+    }
+}

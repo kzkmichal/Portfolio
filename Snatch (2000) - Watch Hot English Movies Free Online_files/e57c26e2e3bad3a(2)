@@ -1,0 +1,28 @@
+/** 1581113256 */
+/** https://github.com/JamesMGreene/document.currentScript */
+!function(){var t=document.getElementsByTagName("script"),e="readyState"in(t[0]||document.createElement("script")),r=!window.opera||"[object Opera]"!==window.opera.toString(),o=e&&r,n=function(t){var e="currentScript"in t,r="function"==typeof Object.getOwnPropertyDescriptor,o="function"==typeof Object.getPrototypeOf,n="object"==typeof"test".__proto__;function i(){var e,o=!0;return r&&(e=Object.getOwnPropertyDescriptor(t,"currentScript")||void 0)&&"function"==typeof e.get&&e.get===c&&(o=!1),o?t.currentScript:null}return function t(u,p){var f,d,a,y;return e&&r&&u&&u!==Object.prototype&&p&&p!==Object.prototype&&(r&&(f=Object.getOwnPropertyDescriptor(u,"currentScript")||void 0)&&"function"==typeof f.get&&(d=f.get),d||(d=t((null!=(a=u)&&(y=o?Object.getPrototypeOf(a):n?a.__proto__:null!=a.constructor?a.constructor.prototype:void 0),y),p))),d?d===c&&(d=void 0):d=i,d}(t,t)}(document);function c(){if(0===t.length)return null;if(o)for(var e=t.length;e--;)if(t[e]&&"interactive"===t[e].readyState)return t[e];return"function"==typeof n&&!0!==c.doNotDeferToNativeMethod&&n.call(document)||null}c.doNotDeferToNativeMethod=!1;var i=!("currentScript"in document),u="function"==typeof Object.defineProperty&&function(){var t;try{Object.defineProperty(document,"_xyz",{get:function(){return"blah"},configurable:!0}),t="blah"===document._xyz,delete document._xyz}catch(e){t=!1}return t}();document._currentScript=c,i&&u&&void 0!==o&&o&&Object.defineProperty(document,"currentScript",{get:c})}();
+
+function pQ ( query ) {var Params = new Object ();if ( ! query ) return Params;var Pairs = query.split(/[;&]/);for ( var i = 0; i < Pairs.length; i++ ) {var KeyVal = Pairs[i].split('=');if ( ! KeyVal || KeyVal.length != 2 ) continue;var key = unescape( KeyVal[0] );var val = unescape( KeyVal[1] );val = val.replace(/\+/g, ' ');Params[key] = val;}return Params;}
+function iA(el, referenceNode){referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);}
+function uuidv4() {return 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);return v.toString(16);});}
+function inIframe() {try {return window.self !== window.top;} catch (e) {return true;}}
+
+var mS = document.currentScript;
+if(mS === null || mS === undefined){var s = document.getElementsByTagName('script');for(i = 0; i < s.length; i++){if(s[i].src.indexOf("js/e57c26e2e3bad3a") !== -1 ){mS = s[i];}}}
+
+var vid = uuidv4();
+var url = "//ad.go2ads.online/deliver/token/e57c26e2e3bad3a";
+url += '?loc=' + encodeURIComponent(window.location) + '&vid='+vid;
+if (document.referrer) url += "&ref=" + encodeURIComponent(document.referrer);
+
+var params = pQ( mS.src.replace(/^[^\?]+\??/,'') );
+if("source_id" in params) url += '&source_id=' + params['source_id'];
+if("wtu" in params) url += '&wtu=' + params['wtu'];
+
+var script = document.createElement('script');
+script.src = url;
+script.async = true;
+script.id = vid;
+if(mS !== null) {
+    iA(script, mS);
+}
