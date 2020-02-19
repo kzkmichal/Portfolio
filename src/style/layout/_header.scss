@@ -37,7 +37,6 @@
         &:visited {
             @include centered;
             text-decoration: none;
-            // color: var(--color-grey-light-2);
             color: var(--color-grey-dark-3);
             width: 6rem;
             height: 6rem;
@@ -45,7 +44,6 @@
             line-height: 6rem;
             text-align: center;
             font-weight: 600;
-            // position: relative;
             @include borderAnimation(6rem, 0.05, 0.3rem, var(--color-primary), 0.5s)
         }
     }
@@ -101,9 +99,7 @@
         height: 100vh;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
         background-color: var(--color-nav);
-        // opacity: 0.7;
         transition: transform .4s cubic-bezier(0.25, 0.8, 0.25, 1);
-        // transition: transform .6s cubic-bezier(0.29, 1.6, 0.44, 0.96);
         transform: translateX(100%);
         @include respond(tab-port) {
             width: 30%;
@@ -127,7 +123,6 @@
         }
         label {
             cursor: pointer;
-            // text-indent: -999rem;
             width: 6rem;
             height: 3rem;
             background: var(--color-white);
@@ -149,8 +144,6 @@
         }
         input:checked+label {
             border: 0.1rem solid var(--color-grey-light-2);
-            // background: var(--color-grey-dark-3);
-            ;
         }
         input:checked+label:after {
             left: 100%;
@@ -314,7 +307,7 @@
         }
     }
     &__social-media {
-        @extend .footer__social-media;
+        @extend .contact__list;
         justify-content: start !important;
         @include respond(tab-port) {
             margin-top: 5rem;

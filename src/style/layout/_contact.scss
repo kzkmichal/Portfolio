@@ -1,10 +1,14 @@
 .contact {
     width: 100%;
-    height: 30rem;
+    height: 40rem;
     @include sectionPadding(6rem, 6rem);
-    background-color: var(--color-grey-light-3);
+    background-image: url(images/original.png);
+    @include backgroundImage(cover, center);
+    background-color: #111010;
     @include respond(tab-port) {
         height: auto;
+        @include backgroundImage(contain, 50% 90%);
+        background-repeat: no-repeat;
     }
     &__inner {
         @extend .wrapper;
@@ -14,77 +18,113 @@
     }
     &__heading {
         position: relative;
-        color: var(--color-grey-dark-3);
+        color: #ffffff;
         margin-bottom: 4rem;
         padding: 1rem 2rem;
         @include cornerBorder(var(--color-primary), 0.3rem, 0, 0%, 0, 0, 25%, 50%)
     }
-    &__details {
+    &__content {
+        padding-top: 2rem;
         width: 100%;
-        height: 100%;
+        flex: 1;
         display: flex;
-        justify-content: space-around;
-        align-items: stretch;
+        justify-content: space-between;
         @include respond(tab-port) {
             flex-direction: column;
-            padding-top: 5rem;
         }
+    }
+    &__details {
+        height: 100%;
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column;
     }
     &__mail {
         &,
         &:link,
         &:visited {
-            width: 40%;
             text-decoration: none; // flex: 1;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             position: relative;
-            @include respond(tab-port) {
-                width: 100%;
-                margin-bottom: 5rem
-            }
+            align-items: center;
+            @include respond(tab-port) {}
         }
     }
-    &__icon {
-        z-index: 1;
-        position: absolute;
-        @include centered;
-        height: 12rem;
-        opacity: 0.7;
-        fill: var(--color-primary-dark);
-        &--phone {
-            height: 9rem;
-        }
+    &__plane,
+    &__reciever {
+        fill: #00D28E;
+        margin-left: 2rem;
+        opacity: 0;
+        transform: translateX(-5rem);
+        transition: transform 0.3s cubic-bezier(.41, 1.08, .81, 1.15), opacity 0.2s ease;
     }
     &__phone {
         @extend .contact__mail;
-        @include respond(tab-port) {
-            margin-top: 5rem;
-        }
+        margin-top: 4rem;
     }
-    &__source {
-        text-transform: uppercase;
-        color: var(--color-grey-dark-3);
-        margin-bottom: 5rem;
-        font-weight: 500;
-        letter-spacing: .3rem;
-        @include respond(tab-port) {
-            margin-bottom: 3rem;
-            font-weight: 600;
+    &__mail:hover .contact__plane,
+    &__phone:hover .contact__reciever {
+        @include respond(tab-land-mobile) {
+            opacity: 1;
+            transform: translateX(0);
         }
     }
     &__text {
         z-index: 2;
-        font-weight: 700;
-        letter-spacing: 0.1rem;
+        font-weight: 600;
+        line-height: 6rem;
         font-family: $font-primary, sans-serif;
-        font-size: 2.4rem;
-        color: var(--color-grey-dark-3);
+        text-decoration: underline;
+        font-size: 3rem;
+        color: #ffffff;
         transition: transform 0.4s ease-in;
+    }
+    &__social-media {
+        flex: 0 0 50%;
         @include respond(tab-port) {
-            font-size: 3rem;
+            margin-top: 4rem;
+        }
+    }
+    &__list {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        @include respond(tab-port) {
+            justify-content: flex-start;
+        }
+    }
+    &__item {
+        width: 6rem;
+        height: 6rem;
+        z-index: 5;
+        box-sizing: border-box;
+        position: relative;
+        @include respond(tab-land-mobile) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        &__link {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        @include respond(mobile) {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+    &__icon {
+        width: 3.5em;
+        height: 3.5rem;
+        @include centered;
+        fill: #ffffff;
+        @include respond(mobile) {
+            width: 3rem;
+            height: 3rem;
         }
     }
 }
