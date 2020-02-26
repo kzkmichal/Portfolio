@@ -18,8 +18,8 @@
     }
     &__logobox {
         position: fixed;
-        top: 0.5rem;
-        left: 1rem;
+        top: 2rem;
+        left: 2rem;
         z-index: 501;
         width: 6rem;
         height: 6rem;
@@ -49,10 +49,10 @@
     }
     &__hamburger {
         position: fixed;
-        top: 0.5rem;
-        right: 2rem;
-        width: 6rem;
-        height: 6rem;
+        top: 2rem;
+        right: 3rem;
+        width: 4rem;
+        height: 4rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -60,6 +60,10 @@
         z-index: 100;
         cursor: pointer;
         transition: transform 0.1s ease;
+        @include respond(mobile) {
+            top: 1rem;
+            right: 1rem;
+        }
     }
     &__hamburger-button {
         position: relative;
@@ -160,10 +164,10 @@
             transform: translateY(-50%);
         }
         .toggle-moon {
-            right: 10%;
+            left: 10%;
         }
         .toggle-sun {
-            left: 10%;
+            right: 10%;
         }
     }
     &__list {
@@ -206,6 +210,9 @@
         }
         @include respond(tab-port) {
             font-size: 3rem;
+        }
+        @include respond(mobile) {
+            font-weight: 700;
         }
     }
     &__item:hover .header__link {
