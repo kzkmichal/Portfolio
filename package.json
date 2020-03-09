@@ -33,6 +33,7 @@
         "gulp-uglify": "^3.0.2"
     },
     "dependencies": {
+        "focus-visible": "^5.0.2",
         "gh-pages": "^2.2.0"
     }
 }

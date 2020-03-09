@@ -48,26 +48,29 @@
         }
     }
     &__hamburger {
-        position: fixed;
-        top: 2rem;
-        right: 3rem;
-        width: 4rem;
-        height: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 1;
-        z-index: 100;
-        cursor: pointer;
-        transition: transform 0.1s ease;
-        @include respond(mobile) {
-            top: 1rem;
-            right: 1rem;
+        &,
+        &:link,
+        &:visited {
+            position: fixed;
+            top: 2rem;
+            right: 3rem;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            z-index: 100;
+            transition: transform 0.1s ease;
+            @include respond(mobile) {
+                top: 1rem;
+                right: 1rem;
+            }
         }
     }
     &__hamburger-button {
         position: relative;
-        display: inline-block;
+        display: block;
         width: 4rem;
         height: 0.5rem;
         border-radius: 1rem;
@@ -77,6 +80,7 @@
         &:before,
         &:after {
             transition: transform .2s ease-in-out;
+            left: 0;
             content: "";
             position: absolute;
             border-radius: 1rem;
@@ -121,9 +125,10 @@
         flex-direction: column;
         align-items: center;
         input[type=checkbox] {
-            height: 0;
-            width: 0;
-            visibility: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            margin: 0;
         }
         label {
             cursor: pointer;
