@@ -36,7 +36,6 @@
             flex: 0 0 50%;
             display: flex;
             flex-direction: column;
-            text-align: justify;
             @include respond(tab-port) {
                 order: 2;
                 margin-top: 7rem;
@@ -50,7 +49,6 @@
         &__paragraph {
             line-height: 130%;
             margin: 0 0 2rem;
-            justify-content: left;
             @include respond(tab-port) {
                 font-size: 2.3rem;
             }
@@ -159,13 +157,13 @@
             }
         }
     }
-    
+
     .slideIn {
         transform: translateY(5%);
         transition: 0.3s ease-out;
         opacity: 0;
     }
-    
+
     .active {
         animation: fadeIn 0.4s linear both;
     }
