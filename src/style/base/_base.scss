@@ -1,7 +1,6 @@
 :root {
-    --color-primary: #00c781;
-    //  --color-primary: #50D890;
-    // --color-primary: #4dd599;
+    --color-primary: #0ab86b;
+    // --color-primary: #00c781;
     --color-primary-light: #00d28e;
     --color-primary-dark: #0ab86b;
     --color-grey-light-1: #eeeeee; //font color --dark-mode
@@ -118,12 +117,15 @@ h2 {
 }
 
 h3 {
-    font-size: 3.2rem;
+    font-size: 3rem;
+    font-weight: 500;
     line-height: 130%;
     margin: 0;
-    @include respond(mobile-small) {
-        font-size: 4.2rem;
-    }
+    @include respond(mobile-small) {}
+}
+
+p {
+    font-size: 1.8rem;
 }
 
 .wrapper {

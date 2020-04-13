@@ -3,7 +3,7 @@
     &:link,
     &:visited {
         color: var(--color-black);
-        border: 0.3rem solid var(--color-primary-light);
+        border: 0.3rem solid var(--color-primary);
         border-radius: 0.5rem;
         text-decoration: none;
         font-weight: 700;
@@ -16,9 +16,9 @@
         @include respond(tab-land-mobile) {
             border: none;
             color: var(--color-white);
-            background-color: var(--color-primary-light);
+            background-color: var(--color-primary);
             transition: transform 0.2s ease, background-color 0.2s ease;
-            @include borderEffect(0.3rem, 0, 0, 100%, 100%, var(--color-primary-light));
+            @include borderEffect(0.3rem, 0, 0, 100%, 100%, var(--color-primary));
             &:hover {
                 transform: translateY(-0.2rem);
                 color: var(--color-grey-dark-3);
