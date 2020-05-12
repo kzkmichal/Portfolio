@@ -71,10 +71,11 @@
         }
     }
     &__img-mobile {
-        width: 100%;
         display: none;
         @include respond(tab-port) {
             display: block;
+            width: 100%;
+            heigh: auto;
         }
     }
     &__text-content {
