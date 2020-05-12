@@ -17,7 +17,6 @@ const addSlide = () => {
     slidesIn.forEach(slideIn => {
         const slideInAt =
             window.scrollY + window.innerHeight - slideIn.offsetHeight / 3;
-        // console.log(slideInAt);
         const isShown = slideInAt > slideIn.offsetTop;
         const isHide = window.scrollY + window.innerHeight < slideIn.offsetTop;
 

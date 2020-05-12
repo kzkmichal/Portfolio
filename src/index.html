@@ -14,9 +14,7 @@
 
 <body>
     <header id="header" class="header">
-
-        <a aria-label="Skip to main navigation" class="skipcontent" href="#calltoaction"> Skip to content</a>
-        </div>
+        <a class="skipcontent" href="#calltoaction"> Skip to content</a>
         <div class="header__map">
             <svg viewBox="0 0 940 460" preserveAspectRatio="xMinYMin meet" width="100%" height="460" class="">
                 <g stroke="none" fill="none" fill-rule="evenodd">
@@ -72,7 +70,7 @@
                 class="header__hamburger-button"></span></button>
         <nav class="header__navbar">
             <form id="focus" class="header__checkbox">
-                <input aria-label=" switch to dark/light mode" type="checkbox" id="switch" name="checkbox" />
+                <input aria-label=" switch betweeb dark and light mode" type="checkbox" id="switch" name="checkbox" />
                 <label for="switch">
                     <div class="toggle-moon">🌙</div>
                     <div class="toggle-sun">☀️</div>
@@ -98,21 +96,23 @@
                     </div>
 
                     <ul class="cta__social-media ">
-                        <li class="cta__item"><a href="https://www.linkedin.com/in/michal-kozak-7a881013b/" class="cta__link cta__link--linkedin"><svg aria-labelledby="linkedIn-profile" role="img"
-                                    class="cta__icon icon--linkedIn" width="30" height="30" viewBox="0 0 30 30"
-                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <li class="cta__item">
+                            <a href="https://www.linkedin.com/in/michal-kozak-7a881013b/" class="cta__link cta__link--linkedin">
+                                <svg aria-labelledby="linkedIn-header" role="img" class="cta__icon icon--linkedIn" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <title id="linkedIn-header"> My linkedIn profile</title>
                                     <path
                                         d="M25.6055 0H4.39453C1.97159 0 0 1.97159 0 4.39453V25.6055C0 28.0284 1.97159 30 4.39453 30H25.6055C28.0284 30 30 28.0284 30 25.6055V4.39453C30 1.97159 28.0284 0 25.6055 0ZM10.6055 23.7891H7.08984V11.4844H10.6055V23.7891ZM10.6055 9.72656H7.08984V6.21094H10.6055V9.72656ZM22.9102 23.7891H19.3945V16.7578C19.3945 15.7887 18.6058 15 17.6367 15C16.6676 15 15.8789 15.7887 15.8789 16.7578V23.7891H12.3633V11.4844H15.8789V12.147C16.7999 11.8607 17.3982 11.4844 18.5156 11.4844C20.8999 11.4869 22.9102 13.6258 22.9102 16.1536V23.7891Z" />
-                                    <title id="linkedIn-profile"> My linkedIn profile</title>
                                 </svg>
 
-                            </a></li>
-                        <li class="cta__item"><a class="cta__link cta__link--github" href="https://github.com/kzkmichal"><svg aria-labelledby="github-profile" role="img"
+                            </a>
+                        </li>
+                        <li class="cta__item"><a class="cta__link cta__link--github" href="https://github.com/kzkmichal"><svg aria-labelledby="github-header" role="img"
                                     class="cta__icon icon--github" width="30" height="29" viewBox="0 0 30 29"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <title id="github-header"> My github profile</title>
+
                                     <path
                                         d="M15 0C6.7125 0 0 6.61138 0 14.7654C0 21.2904 4.2975 26.8237 10.2562 28.7745C11.0062 28.9135 11.2812 28.4565 11.2812 28.0646C11.2812 27.714 11.2688 26.7849 11.2625 25.554C7.09 26.4443 6.21 23.5731 6.21 23.5731C5.5275 21.8689 4.54125 21.4131 4.54125 21.4131C3.1825 20.4978 4.64625 20.5166 4.64625 20.5166C6.1525 20.6192 6.94375 22.0379 6.94375 22.0379C8.28125 24.2956 10.455 23.6432 11.3125 23.2663C11.4475 22.3109 11.8338 21.661 12.2625 21.2916C8.93125 20.9223 5.43 19.6526 5.43 13.9953C5.43 12.3838 6.01125 11.0665 6.97375 10.0335C6.805 9.66038 6.29875 8.15904 7.105 6.12554C7.105 6.12554 8.36125 5.72986 11.23 7.6394C12.43 7.31133 13.705 7.14855 14.98 7.14104C16.255 7.14855 17.53 7.31133 18.73 7.6394C21.58 5.72986 22.8362 6.12554 22.8362 6.12554C23.6425 8.15904 23.1362 9.66038 22.9862 10.0335C23.9425 11.0665 24.5237 12.3838 24.5237 13.9953C24.5237 19.6676 21.0175 20.916 17.68 21.2791C18.205 21.7224 18.6925 22.6277 18.6925 24.0113C18.6925 25.9872 18.6738 27.575 18.6738 28.0545C18.6738 28.4415 18.9362 28.9035 19.705 28.7557C25.7063 26.8174 30 21.2804 30 14.7654C30 6.61138 23.2837 0 15 0V0Z" />
-                                    <title id="github-progile"> My github profile</title>
 
                                 </svg></a></li>
                     </ul>
@@ -125,26 +125,27 @@
             <div class="about__inner">
                 <h2 class="about__heading">About me</h2>
                 <div class="about__content slideIn">
-                    <article class="about__description ">
+                    <article class="about__description">
                         <p class="about__paragraph">Hello, I'm Michał front end-developer from Poland. I graduated with a master degree in electrical engineering in the Lublin University of Technology. I enjoy building things that live on the internet. I'm up to date with design
                             standards, that help me develop websites which are useful and provide intuitive user interfaces.
                         </p>
                         <p class="about__paragraph">
                             In my work, I focus on code quality and maintainability. To be more efficient, I combine front-end tools with solutions aimed at optimizing the code environment. </p>
                         <p class="about__paragraph">
-                            Currently, I'm focused on developing JavaScript skills. </p>
+                            Currently, I'm focused on developing JavaScript and React skills. </p>
                         <p class="about__paragraph">
-                            Here are a few technologies I've been working with recently: </p>
+                            Here are a few technologies and tools I've been working with recently: </p>
 
                         <ul class="about__skills">
                             <li class="about__technology">HTML</li>
                             <li class="about__technology">(S)CSS</li>
                             <li class="about__technology">JavaScript (ES6+)</li>
                             <li class="about__technology">Git</li>
+                            <li class="about__technology">Webpack 4</li>
                             <li class="about__technology">Gulp</li>
                             <li class="about__technology">Figma</li>
                         </ul>
-                        <div class="about__links"><a role="link" href="https://drive.google.com/file/d/1N3FrQ8NUMFTGZAjTL_QV_yU9Ahar8SWO/view?usp=sharing" class="about__curriculum">Resume</a><a href="mailto:kozakmichal48@gmial.com" class="about__mail">Get in touch</a></div>
+                        <div class="about__links"><a role="link" href="https://drive.google.com/drive/folders/1lcYG7iUQazWG8R2MemxrUHVPhSSiaqSp?usp=sharing" class="about__curriculum">Resume</a><a href="mailto:kozakmichal48@gmial.com" class="about__mail">Get in touch</a></div>
                     </article>
                     <div class="about__photo">
                         <figure class="about__image-container">
@@ -160,14 +161,14 @@
             <div class="works__inner">
                 <h2 class="works__heading">My works</h2>
                 <div class="works__container">
-                    <article class="works__project project">
+                    <article class="works__project project slideIn">
                         <div class="project__content">
-                            <a href="https://emersoft.co/" class="project__website-link project__website-link--work">
+                            <a aria-label="Visit Emersoft website" href="https://emersoft.co/" class="project__website-link project__website-link--work">
                                 <div class="project__info">Work place</div>
 
                                 <div class="project__website-content">
-                                    <img src="./images/EmersoftLTD.png" alt="Emersoft webpage" class="project__img">
-                                    <img src="./images/EmersoftLTD_mobile.png" alt="Emersoft webpage" class="project__img-mobile">
+                                    <img src="./images/EmersoftLTD.png" alt="Emersoft website" class="project__img">
+                                    <img src="./images/EmersoftLTD_mobile.png" alt="Emersoft website" class="project__img-mobile">
                                 </div>
                             </a>
                             <div class="project__text-content">
@@ -175,37 +176,39 @@
                                     <h3 class="project__title">Emersoft LTD</h3>
 
                                 </div>
-                                <p class="project__description">Digital Agency based in London where I work as a Junior Web Developer. I'm responsible for adding and uploading products in e-commerce stores.</p>
+                                <p class="project__description">Digital Agency based in London where I work as a Junior Web Developer. I'm responsible for adding and uploading products in e-commerce stores, testing and creating websites.</p>
                             </div>
                         </div>
                     </article>
-                    <article class="works__project project">
+                    <article class="works__project project slideIn">
                         <div class="project__content">
-                            <a href="#works" class="project__website-link project__website-link--projects">
+                            <a aria-label="Check live" href="https://kzkmichal.github.io/Budget-app/" class="project__website-link project__website-link--projects">
                                 <div class="project__info">Project</div>
                                 <div class="project__website-content">
-                                    <img src="./images/1.png" alt="" class="project__img">
-                                    <img src="./images/1-m.png" alt="" class="project__img-mobile">
+                                    <img src="./images/Budgety__project.png" alt="Budget app printscreen" class="project__img">
+                                    <img src="./images/Budgety__project-small.png" alt="Budget app printscreen" class="project__img-mobile">
                                 </div>
                             </a>
                             <div class="project__text-content">
                                 <div class="project__header">
                                     <h3 class="project__title">Budget App</h3>
-                                    <a href="https://github.com/kzkmichal/Budget-app " class=" project__live">
-                                        <svg class="project__icon icon--github" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <a href="https://github.com/kzkmichal/Budget-app" class="project__live">
+                                        <svg aria-labelledby="Budgety-code" role="img" class="project__icon icon--github" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <title id="Budgety-code"> code on Github</title>
+
                 <path
                     d="M15 0C6.7125 0 0 6.61138 0 14.7654C0 21.2904 4.2975 26.8237 10.2562 28.7745C11.0062 28.9135 11.2812 28.4565 11.2812 28.0646C11.2812 27.714 11.2688 26.7849 11.2625 25.554C7.09 26.4443 6.21 23.5731 6.21 23.5731C5.5275 21.8689 4.54125 21.4131 4.54125 21.4131C3.1825 20.4978 4.64625 20.5166 4.64625 20.5166C6.1525 20.6192 6.94375 22.0379 6.94375 22.0379C8.28125 24.2956 10.455 23.6432 11.3125 23.2663C11.4475 22.3109 11.8338 21.661 12.2625 21.2916C8.93125 20.9223 5.43 19.6526 5.43 13.9953C5.43 12.3838 6.01125 11.0665 6.97375 10.0335C6.805 9.66038 6.29875 8.15904 7.105 6.12554C7.105 6.12554 8.36125 5.72986 11.23 7.6394C12.43 7.31133 13.705 7.14855 14.98 7.14104C16.255 7.14855 17.53 7.31133 18.73 7.6394C21.58 5.72986 22.8362 6.12554 22.8362 6.12554C23.6425 8.15904 23.1362 9.66038 22.9862 10.0335C23.9425 11.0665 24.5237 12.3838 24.5237 13.9953C24.5237 19.6676 21.0175 20.916 17.68 21.2791C18.205 21.7224 18.6925 22.6277 18.6925 24.0113C18.6925 25.9872 18.6738 27.575 18.6738 28.0545C18.6738 28.4415 18.9362 28.9035 19.705 28.7557C25.7063 26.8174 30 21.2804 30 14.7654C30 6.61138 23.2837 0 15 0V0Z" />
             </svg>
                                     </a>
 
                                 </div>
-                                <p class="project__description">Budget App.</p>
+                                <p class="project__description">A budget app that helps record monthly incomes and epenses.</p>
                             </div>
                         </div>
                     </article>
-                    <article class="works__project project">
+                    <article class="works__project project slideIn">
                         <div class="project__content">
-                            <a href="https://kzkmichal.github.io/Motivational-quotes/" class="project__website-link project__website-link--projects">
+                            <a aria-label="Check live" href="https://kzkmichal.github.io/Motivational-quotes/" class="project__website-link project__website-link--projects">
                                 <div class="project__info">Project</div>
 
                                 <div class="project__website-content">
@@ -217,7 +220,8 @@
                                 <div class="project__header">
                                     <h3 class="project__title">Motivational Quotes</h3>
                                     <a href="https://github.com/kzkmichal/Motivational-quotes " class=" project__live">
-                                        <svg class="project__icon icon--github" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg aria-labelledby="Motivational-quotes-code" role="img" class="project__icon icon--github" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <title id="motivational-quotes-code">Code on Github</title>
                 <path
                     d="M15 0C6.7125 0 0 6.61138 0 14.7654C0 21.2904 4.2975 26.8237 10.2562 28.7745C11.0062 28.9135 11.2812 28.4565 11.2812 28.0646C11.2812 27.714 11.2688 26.7849 11.2625 25.554C7.09 26.4443 6.21 23.5731 6.21 23.5731C5.5275 21.8689 4.54125 21.4131 4.54125 21.4131C3.1825 20.4978 4.64625 20.5166 4.64625 20.5166C6.1525 20.6192 6.94375 22.0379 6.94375 22.0379C8.28125 24.2956 10.455 23.6432 11.3125 23.2663C11.4475 22.3109 11.8338 21.661 12.2625 21.2916C8.93125 20.9223 5.43 19.6526 5.43 13.9953C5.43 12.3838 6.01125 11.0665 6.97375 10.0335C6.805 9.66038 6.29875 8.15904 7.105 6.12554C7.105 6.12554 8.36125 5.72986 11.23 7.6394C12.43 7.31133 13.705 7.14855 14.98 7.14104C16.255 7.14855 17.53 7.31133 18.73 7.6394C21.58 5.72986 22.8362 6.12554 22.8362 6.12554C23.6425 8.15904 23.1362 9.66038 22.9862 10.0335C23.9425 11.0665 24.5237 12.3838 24.5237 13.9953C24.5237 19.6676 21.0175 20.916 17.68 21.2791C18.205 21.7224 18.6925 22.6277 18.6925 24.0113C18.6925 25.9872 18.6738 27.575 18.6738 28.0545C18.6738 28.4415 18.9362 28.9035 19.705 28.7557C25.7063 26.8174 30 21.2804 30 14.7654C30 6.61138 23.2837 0 15 0V0Z" />
             </svg>
@@ -228,21 +232,22 @@
                             </div>
                         </div>
                     </article>
-                    <article class="works__project project">
+                    <article class="works__project project slideIn">
                         <div class="project__content">
-                            <a href="https://kzkmichal.github.io/Vege-Project/" class="project__website-link project__website-link--projects">
+                            <a aria-label="Check live" href="https://kzkmichal.github.io/Vege-Project/" class="project__website-link project__website-link--projects">
                                 <div class="project__info">Project</div>
 
                                 <div class="project__website-content">
-                                    <img src="./images/Vegetables_project2.png" alt="Vegetables_project-printscreen" class="project__img">
-                                    <img src="./images/Vegetables_project_mobile.png" alt="Vegetables_project-printscreen" class="project__img-mobile">
+                                    <img src="./images/Vegetables_project.png" alt="Vegetables project printscreen" class="project__img">
+                                    <img src="./images/Vegetables_project_mobile.png" alt="Vegetables project printscreen" class="project__img-mobile">
                                 </div>
                             </a>
                             <div class="project__text-content">
                                 <div class="project__header">
                                     <h3 class="project__title">Fresh Vegetables</h3>
                                     <a href="https://github.com/kzkmichal/Vege-Project" class="project__live">
-                                        <svg class="project__icon icon--github" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg aria-labelledby="Vegetables-code" role="img" class="project__icon icon--github" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <title id="Vegetables-code">Code on Github</title>
                 <path
                     d="M15 0C6.7125 0 0 6.61138 0 14.7654C0 21.2904 4.2975 26.8237 10.2562 28.7745C11.0062 28.9135 11.2812 28.4565 11.2812 28.0646C11.2812 27.714 11.2688 26.7849 11.2625 25.554C7.09 26.4443 6.21 23.5731 6.21 23.5731C5.5275 21.8689 4.54125 21.4131 4.54125 21.4131C3.1825 20.4978 4.64625 20.5166 4.64625 20.5166C6.1525 20.6192 6.94375 22.0379 6.94375 22.0379C8.28125 24.2956 10.455 23.6432 11.3125 23.2663C11.4475 22.3109 11.8338 21.661 12.2625 21.2916C8.93125 20.9223 5.43 19.6526 5.43 13.9953C5.43 12.3838 6.01125 11.0665 6.97375 10.0335C6.805 9.66038 6.29875 8.15904 7.105 6.12554C7.105 6.12554 8.36125 5.72986 11.23 7.6394C12.43 7.31133 13.705 7.14855 14.98 7.14104C16.255 7.14855 17.53 7.31133 18.73 7.6394C21.58 5.72986 22.8362 6.12554 22.8362 6.12554C23.6425 8.15904 23.1362 9.66038 22.9862 10.0335C23.9425 11.0665 24.5237 12.3838 24.5237 13.9953C24.5237 19.6676 21.0175 20.916 17.68 21.2791C18.205 21.7224 18.6925 22.6277 18.6925 24.0113C18.6925 25.9872 18.6738 27.575 18.6738 28.0545C18.6738 28.4415 18.9362 28.9035 19.705 28.7557C25.7063 26.8174 30 21.2804 30 14.7654C30 6.61138 23.2837 0 15 0V0Z" />
             </svg>
@@ -276,9 +281,8 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a rel="tab" aria-label="call me" href="tel:+48785443315" class="contact__phone "><span
-                                class="contact__text">+44
-                                07598231855</span> <svg role="img" width="30" height="30" viewBox="0 0 30 30"
+                        <a rel="tab" aria-label="call me" href="tel:4407598231855" class="contact__phone "><span
+                                class="contact__text">+44 07598231855</span> <svg role="img" width="30" height="30" viewBox="0 0 30 30"
                                 class="contact__reciever" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0)">
                                     <path
@@ -304,7 +308,7 @@
                                             d="M24.9825 9.61688C24.9113 9.59438 24.8438 9.57 24.7688 9.54937C24.6788 9.52875 24.5887 9.51188 24.4969 9.49688C24.1406 9.42563 23.7506 9.375 23.2931 9.375C19.3819 9.375 16.9013 12.2194 16.0838 13.3181V9.375H9.375V30H16.0838V18.75C16.0838 18.75 21.1538 11.6887 23.2931 16.875C23.2931 21.5044 23.2931 30 23.2931 30H30V16.0819C30 12.9656 27.8644 10.3688 24.9825 9.61688Z" />
                                         <path
                                             d="M3.28125 6.5625C5.09343 6.5625 6.5625 5.09343 6.5625 3.28125C6.5625 1.46907 5.09343 0 3.28125 0C1.46907 0 0 1.46907 0 3.28125C0 5.09343 1.46907 6.5625 3.28125 6.5625Z" />
-                                        <title> My linkedIn profile</title>
+                                        <title id="linkedIn-profile"> My linkedIn profile</title>
                                     </svg>
 
                                 </a></li>
@@ -313,7 +317,7 @@
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M15 0C6.7125 0 0 6.61138 0 14.7654C0 21.2904 4.2975 26.8237 10.2562 28.7745C11.0062 28.9135 11.2812 28.4565 11.2812 28.0646C11.2812 27.714 11.2688 26.7849 11.2625 25.554C7.09 26.4443 6.21 23.5731 6.21 23.5731C5.5275 21.8689 4.54125 21.4131 4.54125 21.4131C3.1825 20.4978 4.64625 20.5166 4.64625 20.5166C6.1525 20.6192 6.94375 22.0379 6.94375 22.0379C8.28125 24.2956 10.455 23.6432 11.3125 23.2663C11.4475 22.3109 11.8338 21.661 12.2625 21.2916C8.93125 20.9223 5.43 19.6526 5.43 13.9953C5.43 12.3838 6.01125 11.0665 6.97375 10.0335C6.805 9.66038 6.29875 8.15904 7.105 6.12554C7.105 6.12554 8.36125 5.72986 11.23 7.6394C12.43 7.31133 13.705 7.14855 14.98 7.14104C16.255 7.14855 17.53 7.31133 18.73 7.6394C21.58 5.72986 22.8362 6.12554 22.8362 6.12554C23.6425 8.15904 23.1362 9.66038 22.9862 10.0335C23.9425 11.0665 24.5237 12.3838 24.5237 13.9953C24.5237 19.6676 21.0175 20.916 17.68 21.2791C18.205 21.7224 18.6925 22.6277 18.6925 24.0113C18.6925 25.9872 18.6738 27.575 18.6738 28.0545C18.6738 28.4415 18.9362 28.9035 19.705 28.7557C25.7063 26.8174 30 21.2804 30 14.7654C30 6.61138 23.2837 0 15 0V0Z" />
-                                        <title> My github profile</title>
+                                        <title id="github-profile"> My github profile</title>
 
                                     </svg>
 

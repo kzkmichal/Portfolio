@@ -1,4 +1,10 @@
-const { watch, src, dest, series, parallel } = require("gulp");
+const {
+    watch,
+    src,
+    dest,
+    series,
+    parallel
+} = require("gulp");
 const browserSync = require("browser-sync").create();
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
@@ -38,8 +44,12 @@ function jsTask(done) {
 
 function cssTask(done) {
     src(config.app.scss)
-        .pipe(sass({ outputStyle: "expanded" }))
-        .pipe(rename({ suffix: ".bundle" }))
+        .pipe(sass({
+            outputStyle: "expanded"
+        }))
+        .pipe(rename({
+            suffix: ".bundle"
+        }))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest(config.dist.base));
     done();
