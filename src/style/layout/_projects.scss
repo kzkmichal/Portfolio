@@ -50,12 +50,6 @@
         display: flex;
         position: relative;
         overflow: hidden;
-        &--work {
-            cursor: url('/images/pointer2.png'), default;
-        }
-        &--projects {
-            cursor: url('/images/pointer.png'), default;
-        }
     }
     &__website-content {
         width: 100%;
